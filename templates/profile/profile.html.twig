@@ -1,0 +1,10 @@
+{% extends '/profile/baseProfile.html.twig' %}
+
+{% block title %}user.profile{% endblock %}
+
+{% block profileTitle %}
+    <h1>{{ user.name }}</h1>
+    <h3 align="right">{{ user.email }}</h3>
+{% endblock %}
+
+{% block profileContent %}<p>some text on profile page</p>{% endblock %}
