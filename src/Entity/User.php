@@ -17,6 +17,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+    public const STATUS_NEW = 1;
+
+    public const STATUS_BLOCKED = 0;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -54,6 +58,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author", orphanRemoval=true)
      */
     private $comments;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $status;
 
     public function __construct()
     {
@@ -218,6 +227,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $comment->setAuthor(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getStatus(): ?int
+    {
+        return $this->status;
+    }
+
+    public function setStatus(int $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }
