@@ -13,13 +13,25 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProfileController extends AbstractController
 {
-    #[Route('/profile', name: 'app_profile')]
+    #[Route('/')]
+    public function indexNoLocale(): Response
+    {
+        return $this->redirectToRoute('homepage', ['_locale' => 'en']);
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/', name: 'homepage')]
+    public function homepage(): Response
+    {
+        return $this->render('base.html.twig');
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/profile', name: 'app_profile')]
     public function profile(): Response
     {
         return $this->render('profile/profile.html.twig', ['user' => $this->getUser()]);
     }
 
-    #[Route('/addOwnCollection', name: 'app_addOwnCollection')]
+    #[Route('/{_locale<%app.supported_locales%>}/addOwnCollection', name: 'app_addOwnCollection')]
     public function addOwnCollection(Request $request, EntityManagerInterface $em): Response
     {
         $ownCollection = new OwnCollection();
