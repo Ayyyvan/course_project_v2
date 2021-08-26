@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\OwnCollection;
+use App\Entity\User;
 use App\Form\AddOwnCollectionFormType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,10 +20,21 @@ class ProfileController extends AbstractController
     }
 
     #[Route('/addOwnCollection', name: 'app_addOwnCollection')]
-    public function addOwnCollection(): Response
+    public function addOwnCollection(Request $request, EntityManagerInterface $em): Response
     {
         $ownCollection = new OwnCollection();
         $form = $this->createForm(AddOwnCollectionFormType::class, $ownCollection);
+        $form->handleRequest($request);
+
+        $user= $this->getUser();
+
+        if ($user instanceof User && $form->isSubmitted() && $form->isValid()){
+            $ownCollection->setAuthor($user);
+            $em->persist($ownCollection);
+            $em->flush();
+            return $this->redirectToRoute('app_profile');
+        }
+
         return $this->render('profile/addOwnCollection.html.twig', [
             'form' => $form->createView()
         ]);
