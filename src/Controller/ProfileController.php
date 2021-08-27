@@ -13,18 +13,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProfileController extends AbstractController
 {
-    #[Route('/')]
-    public function indexNoLocale(): Response
-    {
-        return $this->redirectToRoute('homepage', ['_locale' => 'en']);
-    }
-
-    #[Route('/{_locale<%app.supported_locales%>}/', name: 'homepage')]
-    public function homepage(): Response
-    {
-        return $this->render('base.html.twig');
-    }
-
     #[Route('/{_locale<%app.supported_locales%>}/profile', name: 'app_profile')]
     public function profile(): Response
     {
