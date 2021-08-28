@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\OwnCollection;
 use App\Entity\User;
 use App\Form\AddOwnCollectionFormType;
+use App\Repository\OwnCollectionRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,9 +31,21 @@ class ProfileController extends AbstractController
     }
 
     #[Route('/{_locale<%app.supported_locales%>}/viewOwnCollection/{id<\d+>}', name: 'view_own_collection')]
-    public function viewOwnCollection(OwnCollection $ownCollection): Response
+    public function viewOwnCollection(int $id,OwnCollectionRepository $repository): Response
     {
-        dd($ownCollection);
+        $collection = $repository->find($id);
+        return $this->render('profile/viewOwnCollection.html.twig', [
+            'ownCollection' => $collection
+        ]);
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/deleteOwnCollection/{id<\d+>}', name: 'delete_own_collection')]
+    public function deleteOwnCollection(int $id,OwnCollectionRepository $repository, EntityManagerInterface $em): Response
+    {
+        $collection = $repository->find($id);
+        $em->remove($collection);
+        $em->flush();
+        return $this->redirectToRoute('app_profile');
     }
 
     #[Route('/{_locale<%app.supported_locales%>}/addOwnCollection', name: 'app_addOwnCollection')]
@@ -41,16 +54,13 @@ class ProfileController extends AbstractController
         $ownCollection = new OwnCollection();
         $form = $this->createForm(AddOwnCollectionFormType::class, $ownCollection);
         $form->handleRequest($request);
-
         $user= $this->getUser();
-
         if ($user instanceof User && $form->isSubmitted() && $form->isValid()){
             $ownCollection->setAuthor($user);
             $em->persist($ownCollection);
             $em->flush();
             return $this->redirectToRoute('app_profile');
         }
-
         return $this->render('profile/addOwnCollection.html.twig', [
             'form' => $form->createView()
         ]);

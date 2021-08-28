@@ -1,0 +1,12 @@
+{% extends '/profile/baseProfile.html.twig' %}
+
+{% block title %}{{ ownCollection.name }}{% endblock %}
+
+{% block profileTitle %}
+    <h1>{{ 'Collection'|trans }}: {{ ownCollection.name }}</h1>
+{% endblock %}
+
+{% block profileContent %}
+    <p>here must be your collection</p>
+{% endblock %}
+
