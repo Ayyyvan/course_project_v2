@@ -19,6 +19,22 @@ class ProfileController extends AbstractController
         return $this->render('profile/profile.html.twig', ['user' => $this->getUser()]);
     }
 
+    #[Route('/{_locale<%app.supported_locales%>}/listOwnCollections', name: 'list_own_collections')]
+    public function listOwnCollections(): Response
+    {
+        $user = $this->getUser();
+
+        return $this->render('profile/listOwnCollections.html.twig', [
+            'ownCollections' => $user->getOwnCollection()
+        ]);
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/viewOwnCollection/{id<\d+>}', name: 'view_own_collection')]
+    public function viewOwnCollection(OwnCollection $ownCollection): Response
+    {
+        dd($ownCollection);
+    }
+
     #[Route('/{_locale<%app.supported_locales%>}/addOwnCollection', name: 'app_addOwnCollection')]
     public function addOwnCollection(Request $request, EntityManagerInterface $em): Response
     {

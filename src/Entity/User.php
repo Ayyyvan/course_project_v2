@@ -52,7 +52,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\OneToMany(targetEntity=OwnCollection::class, mappedBy="author", orphanRemoval=true)
      */
-    private $OwnCollection;
+    private Collection $OwnCollection;
 
     /**
      * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author", orphanRemoval=true)
