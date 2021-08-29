@@ -37,10 +37,7 @@ class ProfileController extends AbstractController
     #[Route('/{_locale<%app.supported_locales%>}/viewOwnCollection/{id<\d+>}', name: 'view_own_collection')]
     public function viewOwnCollection(int $id,OwnCollectionRepository $repository): Response
     {
-        if (!$this->getUser())
-        {
-            return $this->redirectToRoute('homepage');
-        }
+
         $collection = $repository->find($id);
         return $this->render('profile/viewOwnCollection.html.twig', [
             'ownCollection' => $collection
