@@ -10,13 +10,13 @@
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ path('app_profile') }}">
-                                <i class="bi bi-house-door"></i> Profile
+                                <i class="bi bi-house-door"></i> {{ 'Profile'|trans }}
                             </a>
                         </li>
                     </ul>
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                         <span>
-                            <i class="bi bi-box"></i> Collections
+                            <i class="bi bi-box"></i> {{ 'Collections'|trans }}
                         </span>
                         <a class="link-secondary" href="{{ path('app_addOwnCollection') }}">
                             <i class="bi bi-plus-circle"></i>

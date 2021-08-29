@@ -38,6 +38,18 @@
                                 <a class="dropdown-item" href="{{ path('homepage', {_locale: 'ru'}) }}">Русский</a>
                             </div>
                         </li>
+                        {% if app.user %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_login') }}">{{ 'Log in'|trans }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_register') }}">{{ 'Sign up'|trans }}</a>
+                            </li>
+                        {% endif %}
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="{{ 'Books, Alcohol, Coins...'|trans }}" aria-label="Search">
