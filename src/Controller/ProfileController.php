@@ -24,6 +24,10 @@ class ProfileController extends AbstractController
     public function listOwnCollections(): Response
     {
         $user = $this->getUser();
+        if (!$user)
+        {
+            return $this->redirectToRoute('homepage');
+        }
 
         return $this->render('profile/listOwnCollections.html.twig', [
             'ownCollections' => $user->getOwnCollection()
@@ -33,6 +37,10 @@ class ProfileController extends AbstractController
     #[Route('/{_locale<%app.supported_locales%>}/viewOwnCollection/{id<\d+>}', name: 'view_own_collection')]
     public function viewOwnCollection(int $id,OwnCollectionRepository $repository): Response
     {
+        if (!$this->getUser())
+        {
+            return $this->redirectToRoute('homepage');
+        }
         $collection = $repository->find($id);
         return $this->render('profile/viewOwnCollection.html.twig', [
             'ownCollection' => $collection
@@ -42,15 +50,23 @@ class ProfileController extends AbstractController
     #[Route('/{_locale<%app.supported_locales%>}/deleteOwnCollection/{id<\d+>}', name: 'delete_own_collection')]
     public function deleteOwnCollection(int $id,OwnCollectionRepository $repository, EntityManagerInterface $em): Response
     {
+        if (!$this->getUser())
+        {
+            return $this->redirectToRoute('homepage');
+        }
         $collection = $repository->find($id);
         $em->remove($collection);
         $em->flush();
         return $this->redirectToRoute('app_profile');
     }
 
-    #[Route('/{_locale<%app.supported_locales%>}/addOwnCollection', name: 'app_addOwnCollection')]
+    #[Route('/{_locale<%app.supported_locales%>}/addOwnCollection', name: 'add_own_collection')]
     public function addOwnCollection(Request $request, EntityManagerInterface $em): Response
     {
+        if (!$this->getUser())
+        {
+            return $this->redirectToRoute('homepage');
+        }
         $ownCollection = new OwnCollection();
         $form = $this->createForm(AddOwnCollectionFormType::class, $ownCollection);
         $form->handleRequest($request);
