@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ru" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="wYmEDPf" resname="Log in">
+        <source>Log in</source>
+        <target>Войти</target>
+      </trans-unit>
+      <trans-unit id="XiuOllA" resname="Sign up">
+        <source>Sign up</source>
+        <target>Регистрация</target>
+      </trans-unit>
+      <trans-unit id="Dv7RUbz" resname="Books, Alcohol, Coins...">
+        <source>Books, Alcohol, Coins...</source>
+        <target>Книги, Алкоголь, Монеты ...</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Найти</target>
+      </trans-unit>
+      <trans-unit id="e3kHCP8" resname="Collection">
+        <source>Collection</source>
+        <target>Коллекция</target>
+      </trans-unit>
+      <trans-unit id="1pajW90" resname="Profile">
+        <source>Profile</source>
+        <target>Профиль</target>
+      </trans-unit>
+      <trans-unit id="n5.q3nY" resname="Collections">
+        <source>Collections</source>
+        <target>Коллекции</target>
+      </trans-unit>
+      <trans-unit id="RZXz_wv" resname="Add collection">
+        <source>Add collection</source>
+        <target>Добавить коллекцию</target>
+      </trans-unit>
+      <trans-unit id="zv1m.tu" resname="New collection">
+        <source>New collection</source>
+        <target>Новая коллекция</target>
+      </trans-unit>
+      <trans-unit id="dDUw20Q" resname="Please sign in">
+        <source>Please sign in</source>
+        <target>Пожалуйста авторизируйтесь</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit id="v9QCsvb" resname="Sign in">
+        <source>Sign in</source>
+        <target>Войти</target>
+      </trans-unit>
+      <trans-unit id="SWFhRVF" resname="Log out">
+        <source>Log out</source>
+        <target>Выйти из профиля</target>
+      </trans-unit>
+      <trans-unit id="njOR6b8" resname="Homepage">
+        <source>Homepage</source>
+        <target>Главная</target>
+      </trans-unit>
+      <trans-unit id="FqLSEib" resname="All collections">
+        <source>All collections</source>
+        <target>Все коллекции</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
