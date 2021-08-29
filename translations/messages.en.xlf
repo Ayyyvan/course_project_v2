@@ -65,6 +65,30 @@
         <source>All collections</source>
         <target>All collections</target>
       </trans-unit>
+      <trans-unit id="FqLSEi4" resname="reg.Name">
+        <source>reg.Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="FqLSE10" resname="reg.Email">
+        <source>reg.Email</source>
+        <target>Email address</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi5" resname="reg.Password">
+        <source>reg.Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi6" resname="reg.Repeat password">
+        <source>reg.Repeat password</source>
+        <target>Repeat password</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi7" resname="reg.Registrate">
+        <source>reg.Registrate</source>
+        <target>Registrate</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi9" resname="reg.Registration">
+        <source>reg.Registration</source>
+        <target>Registration</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

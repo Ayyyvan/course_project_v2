@@ -65,6 +65,30 @@
         <source>All collections</source>
         <target>Все коллекции</target>
       </trans-unit>
+      <trans-unit id="FqLSEi4" resname="reg.Name">
+        <source>reg.Name</source>
+        <target>Имя</target>
+      </trans-unit>
+      <trans-unit id="FqLSE10" resname="reg.Email">
+        <source>reg.Email</source>
+        <target>Адрес Email</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi5" resname="reg.Password">
+        <source>reg.Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi6" resname="reg.Repeat password">
+        <source>reg.Repeat password</source>
+        <target>Повторите пароль</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi7" resname="reg.Registrate">
+        <source>reg.Registrate</source>
+        <target>Зарегистрировать</target>
+      </trans-unit>
+      <trans-unit id="FqLSEi9" resname="Registration">
+        <source>Registration</source>
+        <target>Регистрация</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
