@@ -50,6 +50,11 @@ class OwnCollection
      */
     private $createdAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=CollectionTheme::class, inversedBy="OwnCollection")
+     */
+    private $collectionTheme;
+
     public function __construct()
     {
         $this->item = new ArrayCollection();
@@ -166,6 +171,18 @@ class OwnCollection
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getCollectionTheme(): ?CollectionTheme
+    {
+        return $this->collectionTheme;
+    }
+
+    public function setCollectionTheme(?CollectionTheme $collectionTheme): self
+    {
+        $this->collectionTheme = $collectionTheme;
 
         return $this;
     }
