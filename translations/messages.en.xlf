@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="SWFhRVF" resname="Log out">
+        <source>Log out</source>
+        <target>Log out</target>
+      </trans-unit>
+      <trans-unit id="wYmEDPf" resname="Log in">
+        <source>Log in</source>
+        <target>Log in</target>
+      </trans-unit>
+      <trans-unit id="XiuOllA" resname="Sign up">
+        <source>Sign up</source>
+        <target>Sign up</target>
+      </trans-unit>
+      <trans-unit id="Dv7RUbz" resname="Books, Alcohol, Coins...">
+        <source>Books, Alcohol, Coins...</source>
+        <target>Books, Alcohol, Coins...</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+      <trans-unit id="e3kHCP8" resname="Collection">
+        <source>Collection</source>
+        <target>Collection</target>
+      </trans-unit>
+      <trans-unit id="1pajW90" resname="Profile">
+        <source>Profile</source>
+        <target>Profile</target>
+      </trans-unit>
+      <trans-unit id="n5.q3nY" resname="Collections">
+        <source>Collections</source>
+        <target>Collections</target>
+      </trans-unit>
+      <trans-unit id="RZXz_wv" resname="Add collection">
+        <source>Add collection</source>
+        <target>Add collection</target>
+      </trans-unit>
+      <trans-unit id="zv1m.tu" resname="New collection">
+        <source>New collection</source>
+        <target>New collection</target>
+      </trans-unit>
+      <trans-unit id="dDUw20Q" resname="Please sign in">
+        <source>Please sign in</source>
+        <target>Please sign in</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="v9QCsvb" resname="Sign in">
+        <source>Sign in</source>
+        <target>Sign in</target>
+      </trans-unit>
+      <trans-unit id="njOR6b8" resname="Homepage">
+        <source>Homepage</source>
+        <target>Homepage</target>
+      </trans-unit>
+      <trans-unit id="FqLSEib" resname="All collections">
+        <source>All collections</source>
+        <target>All collections</target>
+      </trans-unit>
+      <trans-unit id="pocMrmf" resname="reg.Name">
+        <source>reg.Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="n7TExqk" resname="reg.Email">
+        <source>reg.Email</source>
+        <target>Email address</target>
+      </trans-unit>
+      <trans-unit id="YhE9QLa" resname="reg.Password">
+        <source>reg.Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="25lJSLG" resname="reg.Repeat password">
+        <source>reg.Repeat password</source>
+        <target>Repeat password</target>
+      </trans-unit>
+      <trans-unit id="iReugSw" resname="reg.Registrate">
+        <source>reg.Registrate</source>
+        <target>Registrate</target>
+      </trans-unit>
+      <trans-unit id="x5Pg2aH" resname="Registration">
+        <source>Registration</source>
+        <target>Registration</target>
+      </trans-unit>
+      <trans-unit id="qAzFkMc" resname="collection.name">
+        <source>collection.name</source>
+        <target>Collection name</target>
+      </trans-unit>
+      <trans-unit id="0ueqPzR" resname="collection.description">
+        <source>collection.description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="c4VnmvY" resname="collection.submit">
+        <source>collection.submit</source>
+        <target>Submit</target>
+      </trans-unit>
+      <trans-unit id="kiIUkit" resname="Collection name">
+        <source>Collection name</source>
+        <target>Collection name</target>
+      </trans-unit>
+      <trans-unit id="2VCCou5" resname="Author">
+        <source>Author</source>
+        <target>Author</target>
+      </trans-unit>
+      <trans-unit id="r3Y7.G6" resname="Collection theme">
+        <source>Collection theme</source>
+        <target>Collection theme</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
