@@ -1,9 +1,24 @@
+<table class="table">
+    <tr>
+        <th>{{ 'Collection name'|trans }}</th>
+        <th>{{ 'Author'|trans }}</th>
+        <th>{{ 'Collection theme'|trans }}</th>
+    </tr>
 {% for collection in allCollections %}
-    <li class="nav-item d-flex justify-content-between align-items-center">
-        <span>
-            <a class="nav-link" href="{{ path('view_own_collection', {id: collection.id}) }}">
-                {{ collection.name }}
-            </a>
-        </span>
-    </li>
+    <tr>
+        <td>
+            <li class="nav-item d-flex justify-content-between align-items-center">
+                <a class="nav-link" href="{{ path('view_own_collection', {id: collection.id}) }}">
+                    {{ collection.name }}
+                </a>
+            </li>
+        </td>
+        <td>
+            {{ collection.author.name }}
+        </td>
+        <td>
+            {{ '' }}
+        </td>
+    </tr>
 {% endfor %}
+</table>
