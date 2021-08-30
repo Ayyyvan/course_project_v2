@@ -4,9 +4,16 @@
 
 {% block profileTitle %}
     <h1>{{ 'Collection'|trans }}: {{ ownCollection.name }}</h1>
+    {% if app.user == you %}
+        <a class="link-secondary" href="{{ path ('add_item', {ownCollectionId: ownCollection.id}) }}">
+            <i class="bi bi-plus-circle"></i>
+        </a>
+    {% endif %}
 {% endblock %}
 
 {% block profileContent %}
-    <p>here must be your collection</p>
+
+    {{ render_esi(url('list_items', {ownCollectionId: ownCollection.id})) }}
+
 {% endblock %}
 

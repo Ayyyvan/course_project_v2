@@ -1,0 +1,14 @@
+{% extends 'profile/baseProfile.html.twig' %}
+
+{% block title %}{{ 'Add Item'|trans }}{% endblock %}
+
+{% block profileTitle %}
+    <h1>{{ 'New Item'|trans }}</h1>
+{% endblock %}
+
+{% block profileContent %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
+

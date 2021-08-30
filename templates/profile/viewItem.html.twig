@@ -1,0 +1,12 @@
+{% extends '/profile/baseProfile.html.twig' %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block profileTitle %}
+    <h1>{{ 'Item'|trans }}: {{ item.name }}</h1>
+{% endblock %}
+
+{% block profileContent %}
+    <a>some description of item</a>
+{% endblock %}
+

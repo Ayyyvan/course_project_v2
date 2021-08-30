@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\Item;
 use App\Entity\OwnCollection;
 use App\Entity\User;
 use App\Form\AddOwnCollectionFormType;
+use App\Form\ItemFormType;
+use App\Repository\ItemRepository;
 use App\Repository\OwnCollectionRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,7 +33,7 @@ class ProfileController extends AbstractController
         }
 
         return $this->render('profile/listOwnCollections.html.twig', [
-            'ownCollections' => $user->getOwnCollection()
+            'ownCollections' => $user->getOwnCollection(),
         ]);
     }
 
@@ -40,7 +43,8 @@ class ProfileController extends AbstractController
 
         $collection = $repository->find($id);
         return $this->render('profile/viewOwnCollection.html.twig', [
-            'ownCollection' => $collection
+            'ownCollection' => $collection,
+            'you' => $this->getUser(),
         ]);
     }
 
@@ -76,6 +80,56 @@ class ProfileController extends AbstractController
         }
         return $this->render('profile/addOwnCollection.html.twig', [
             'form' => $form->createView()
+        ]);
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/{ownCollectionId<\d+>}/addItem', name: 'add_item')]
+    public function addItem(Request $request, EntityManagerInterface $em, int $ownCollectionId): Response
+    {
+        if (!$this->getUser())
+        {
+            return $this->redirectToRoute('homepage');
+        }
+        $item = new Item();
+        $form = $this->createForm(ItemFormType::class, $item);
+        $form->handleRequest($request);
+
+        $ownCollection = $em->find(OwnCollection::class, $ownCollectionId);
+        if ($ownCollection instanceof OwnCollection && $form->isSubmitted() && $form->isValid()){
+
+            $item->setOwnCollection($ownCollection);
+            $em->persist($item);
+            $em->flush();
+
+            return $this->redirectToRoute('view_own_collection', ['id' => $ownCollectionId]);
+        }
+
+        return $this->render('profile/addItem.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/{ownCollectionId<\d+>}/{itemId<\d+>}', name: 'view_item')]
+    public function viewItem(int $itemId, int $ownCollectionId, ItemRepository $repository): Response
+    {
+        $item = $repository->find($itemId);
+
+        return $this->render('profile/viewItem.html.twig', [
+            'item' => $item,
+        ]);
+    }
+
+    #[Route('/{_locale<%app.supported_locales%>}/{ownCollectionId<\d+>}/listItems', name: 'list_items')]
+    public function listItems(int $ownCollectionId, OwnCollectionRepository $repository): Response
+    {
+        $collection = $repository->find($ownCollectionId);
+        if (!$this->getUser())
+        {
+            return $this->redirectToRoute('homepage');
+        }
+
+        return $this->render('profile/listItems.html.twig', [
+            'items' => $collection->getItem(),
         ]);
     }
 }

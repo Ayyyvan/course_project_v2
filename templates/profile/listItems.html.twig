@@ -1,0 +1,9 @@
+{% for item in items %}
+<li>
+    <span>
+        <a class="nav-link" href="{{ path('view_item',{ownCollectionId: item.ownCollection.id, itemId: item.id}) }}">
+            {{ item.name }}
+        </a>
+    </span>
+</li>
+{% endfor %}
