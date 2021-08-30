@@ -89,6 +89,18 @@
         <source>Registration</source>
         <target>Регистрация</target>
       </trans-unit>
+      <trans-unit id="1pajW91" resname="collection.name">
+        <source>collection.name</source>
+        <target>Название коллекции</target>
+      </trans-unit>
+      <trans-unit id="1pajW92" resname="collection.description">
+        <source>collection.description</source>
+        <target>Описание</target>
+      </trans-unit>
+      <trans-unit id="1pajW93" resname="collection.submit">
+        <source>collection.submit</source>
+        <target>Добавить коллекцию</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

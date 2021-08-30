@@ -89,6 +89,18 @@
         <source>reg.Registration</source>
         <target>Registration</target>
       </trans-unit>
+      <trans-unit id="1pajW91" resname="collection.name">
+        <source>collection.name</source>
+        <target>Collection name</target>
+      </trans-unit>
+      <trans-unit id="1pajW92" resname="collection.description">
+        <source>collection.description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="1pajW93" resname="collection.submit">
+        <source>collection.submit</source>
+        <target>Add collection</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
