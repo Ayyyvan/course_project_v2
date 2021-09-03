@@ -1,0 +1,41 @@
+{% extends 'user/profile/baseProfile.html.twig' %}
+
+{% block title %}{{ 'Profile'|trans }}{% endblock %}
+
+{% block profileTitle %}
+    <h1>{{ user.name }}</h1>
+    <h3 align="right">{{ user.email }}</h3>
+{% endblock %}
+
+{% block profileContent %}
+
+    {% if size %}
+        <table class="table">
+            <tr>
+                <th>{{ 'Collection name'|trans }}</th>
+                <th>{{ 'Author'|trans }}</th>
+                <th>{{ 'Collection theme'|trans }}</th>
+            </tr>
+            {% for collection in ownCollections %}
+                <tr>
+                    <td>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link" href="{{ path('view_own_collection', {id: collection.id}) }}">
+                                {{ collection.name }}
+                            </a>
+                        </li>
+                    </td>
+                    <td>
+                        {{ collection.author.name }}
+                    </td>
+                    <td>
+                        {{ collection.collectionTheme.name }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <a>{{ "You don't have any collection"|trans}}</a>
+    {% endif %}
+
+{% endblock %}

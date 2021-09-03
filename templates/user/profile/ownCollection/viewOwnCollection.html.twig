@@ -1,4 +1,4 @@
-{% extends '/profile/baseProfile.html.twig' %}
+{% extends 'user/profile/baseProfile.html.twig' %}
 
 {% block title %}{{ ownCollection.name }}{% endblock %}
 
@@ -12,8 +12,8 @@
 {% endblock %}
 
 {% block profileContent %}
-
-    {{ render_esi(url('list_items', {ownCollectionId: ownCollection.id})) }}
-
+    {% if app.user %}
+        {{ render_esi(url('list_items', {ownCollectionId: ownCollection.id})) }}
+    {% endif %}
 {% endblock %}
 

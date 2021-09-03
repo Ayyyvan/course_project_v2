@@ -65,41 +65,85 @@
         <source>All collections</source>
         <target>All collections</target>
       </trans-unit>
-      <trans-unit id="FqLSEi4" resname="reg.Name">
+      <trans-unit id="pocMrmf" resname="reg.Name">
         <source>reg.Name</source>
         <target>Name</target>
       </trans-unit>
-      <trans-unit id="FqLSE10" resname="reg.Email">
+      <trans-unit id="n7TExqk" resname="reg.Email">
         <source>reg.Email</source>
         <target>Email address</target>
       </trans-unit>
-      <trans-unit id="FqLSEi5" resname="reg.Password">
+      <trans-unit id="YhE9QLa" resname="reg.Password">
         <source>reg.Password</source>
         <target>Password</target>
       </trans-unit>
-      <trans-unit id="FqLSEi6" resname="reg.Repeat password">
+      <trans-unit id="25lJSLG" resname="reg.Repeat password">
         <source>reg.Repeat password</source>
         <target>Repeat password</target>
       </trans-unit>
-      <trans-unit id="FqLSEi7" resname="reg.Registrate">
+      <trans-unit id="iReugSw" resname="reg.Registrate">
         <source>reg.Registrate</source>
         <target>Registrate</target>
       </trans-unit>
-      <trans-unit id="FqLSEi9" resname="reg.Registration">
+      <trans-unit id="MfWBSjQ" resname="reg.Registration">
         <source>reg.Registration</source>
         <target>Registration</target>
       </trans-unit>
-      <trans-unit id="1pajW91" resname="collection.name">
+      <trans-unit id="qAzFkMc" resname="collection.name">
         <source>collection.name</source>
         <target>Collection name</target>
       </trans-unit>
-      <trans-unit id="1pajW92" resname="collection.description">
+      <trans-unit id="0ueqPzR" resname="collection.description">
         <source>collection.description</source>
         <target>Description</target>
       </trans-unit>
-      <trans-unit id="1pajW93" resname="collection.submit">
+      <trans-unit id="c4VnmvY" resname="collection.submit">
         <source>collection.submit</source>
         <target>Add collection</target>
+      </trans-unit>
+      <trans-unit id="vY7ltoy" resname="item.name">
+        <source>item.name</source>
+        <target>Item name</target>
+      </trans-unit>
+      <trans-unit id="n9coxmy" resname="Add">
+        <source>Add</source>
+        <target>Add</target>
+      </trans-unit>
+      <trans-unit id="kiIUkit" resname="Collection name">
+        <source>Collection name</source>
+        <target>Collection name</target>
+      </trans-unit>
+      <trans-unit id="2VCCou5" resname="Author">
+        <source>Author</source>
+        <target>Author</target>
+      </trans-unit>
+      <trans-unit id="r3Y7.G6" resname="Collection theme">
+        <source>Collection theme</source>
+        <target>Collection theme</target>
+      </trans-unit>
+      <trans-unit id="x5Pg2aH" resname="Registration">
+        <source>Registration</source>
+        <target>Registration</target>
+      </trans-unit>
+      <trans-unit id="pj7RHgw" resname="Adding Item">
+        <source>Adding Item</source>
+        <target>Adding Item</target>
+      </trans-unit>
+      <trans-unit id="awlyjTR" resname="New Item">
+        <source>New Item</source>
+        <target>New Item</target>
+      </trans-unit>
+      <trans-unit id="ZSvMOke" resname="Item">
+        <source>Item</source>
+        <target>Item</target>
+      </trans-unit>
+      <trans-unit id="8k2VRbL" resname="You don't have any collection">
+        <source>You don't have any collection</source>
+        <target>You don't have any collection</target>
+      </trans-unit>
+      <trans-unit id="8k2VRb1" resname="collection.theme">
+        <source>collection.theme</source>
+        <target>Collection theme</target>
       </trans-unit>
     </body>
   </file>

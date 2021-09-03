@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\CollectionTheme;
 use App\Entity\OwnCollection;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -32,5 +33,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Users', 'fas fa-list', User::class);
         yield MenuItem::linkToCrud('OwnCollections', 'fas fa-list', OwnCollection::class);
+        yield MenuItem::linkToCrud('CollectionTheme', 'fas fa-list', CollectionTheme::class);
     }
 }
