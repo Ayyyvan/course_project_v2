@@ -64,7 +64,7 @@ class OwnCollectionController extends AbstractController
         $collection = $repository->find($id);
         return $this->render('user/profile/ownCollection/viewOwnCollection.html.twig', [
             'ownCollection' => $collection,
-            'you' => $this->getUser(),
+            'owner' => $collection->getAuthor()
         ]);
     }
 
